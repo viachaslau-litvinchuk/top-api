@@ -1,0 +1,13 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "debug NesJS",
+			"port": 9229,
+			"request": "attach",
+			"type": "node"
+		}
+
+	],
+	"compounds": []
+}
