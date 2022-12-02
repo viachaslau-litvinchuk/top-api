@@ -37,3 +37,6 @@ lerna-debug.log*
 # db data
 /mongo-data-4.4
 /mongo-data
+
+# env
+.env
