@@ -1,6 +1,8 @@
 # compiled output
 /dist
 /node_modules
+.env
+/uploads
 
 # Logs
 logs
@@ -37,6 +39,3 @@ lerna-debug.log*
 # db data
 /mongo-data-4.4
 /mongo-data
-
-# env
-.env

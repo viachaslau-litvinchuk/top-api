@@ -1,16 +1,5 @@
 version: '3'
 services:
-  mongo:
-      image: docker.pkg.github.com/viachaslau-litvinchuk/top-api/top-api:develop
-      container_name: mongo
-      restart: always
-      environment:
-        - MONGO_INITDB_ROOT_USERNAME=admin
-        - MONGO_INITDB_ROOT_PASSWORD=admin
-      ports:
-        - 27017:27017
-      volumes:
-        - ./mongo-data-4.4:/data/db
   top.api:
       image: top-api:latest
       container_name: top-api
@@ -19,5 +8,3 @@ services:
         - 3000:3000
       volumes:
         - ./.env:/opt/app/.env
-      links:
-        - mongo
