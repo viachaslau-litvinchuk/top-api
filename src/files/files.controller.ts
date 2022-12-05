@@ -13,7 +13,7 @@ export class FilesController {
 	@HttpCode(200)
 	@UseGuards(JwtAuthGuard)
 	@UseInterceptors(FileInterceptor('files'))
-	async uploadFiles(@UploadedFile() files: Express.Multer.File[]): Promise<FileElementResponse[]> {
-		return this.filesService.saveFiles(files);
+	async uploadFiles(@UploadedFile() files: Express.Multer.File): Promise<FileElementResponse[]> {
+		return this.filesService.saveFiles([files]);
 	}
 }
