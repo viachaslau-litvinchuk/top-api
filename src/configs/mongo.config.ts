@@ -18,7 +18,10 @@ const getMongoString = (configService: ConfigService) =>
 	':' +
 	configService.get('MONGO_PORT') +
 	'/' +
-	configService.get('MONGO_AUTHDATABASE');
+	configService.get('MONGO_AUTHDATABASE') +
+	'?directConnection=true';
+
+	// mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[defaultauthdb][?options]]
 
 const getMongoOptions = () => ({
 	useNewUrlParser: true,
