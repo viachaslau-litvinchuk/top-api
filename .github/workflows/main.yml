@@ -14,7 +14,6 @@ jobs:
         with:
           registry: ghcr.io
           name: ghcr.io/viachaslau-litvinchuk/top-api/top-api
-          push: true
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           tags: develop
